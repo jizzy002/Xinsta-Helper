@@ -9,7 +9,7 @@ Hooks = ""
 FNULL = open(os.devnull, 'w')
 
 def decompileInstagram():
-	os.system("jadx/bin/jadx *.apk -d output");
+	os.system("jadx0.9.0/bin/jadx *.apk -d output");
 
 	fetchHooks()
 
