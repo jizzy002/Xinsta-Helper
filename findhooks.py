@@ -8,11 +8,6 @@ import os.path
 Hooks = ""
 FNULL = open(os.devnull, 'w')
 
-def decompileInstagram():
-	os.system("jadx0.9.0/bin/jadx input/*.apk -d output");
-
-	fetchHooks()
-
 
 def fetchHooks():
 	global Hooks
@@ -172,8 +167,8 @@ def Find(cmd):
 
 def main():
 	try:
-		decompileInstagram()
+		fetchHooks()
 	except BaseException as error:
-		print("Failed Decompiling Instagram ", error)
+		print("Failed fetching Hooks ", error)
 
 main()
