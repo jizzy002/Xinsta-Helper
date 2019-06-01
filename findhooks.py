@@ -25,17 +25,17 @@ def createHooks():
 	Hash = "output"
 	print('Fetching Hooks')
 
-	Feed_OnClick = Find("grep -Ril 'ShareLaterMedia.SHARE_LATER_MEDIA' %s/com/instagram/feed/" % Hash)
-	Feed = Find("grep -Ril 'HashMap<String, ArrayList<ProductTag>> hashMap' %s/com/instagram/feed" % Hash)
-	User = Find("grep -Ril 'Follow status:' %s/com/instagram/" % Hash)
-	Feed_Inject = Find("grep -Ril 'action_menu' %s/com/instagram/feed/" % Hash)
-	Direct_Hold = Find("grep -Ril 'getString(R.string.direct_unsend_message)))' %s/com/instagram/" % Hash)
-	Feed_Image = Find("grep -Ril 'full_size_' %s/com/instagram/feed" % Hash)
-	Comments =  Find("grep -Ril 'onSingleTapUp' %s/com/instagram/comments/" % Hash)
-	Comments2 =  Find("grep -Ril 'Comment{mCreatedAtSeconds' %s/com/instagram/" % Hash)
-	Dialog = Find("grep -Ril 'message_avatar_container' %s/com/instagram/" % Hash)	
-	Profile = Find("grep -Ril 'https://www.instagram' %s/com/instagram/profile/" % Hash)
-	Like = Find("grep -Ril 'isTouchExplorationEnabled' %s/com/instagram/feed/ui" % Hash)
+	Feed_OnClick = Find("grep -Ril 'story_app_attribution' %s/com/instagram/feed/" % Hash) #new hook
+	Feed = Find("grep -Ril 'Error! Trying to access ReelsPlugin without an instance!' %s/com/instagram/feed" % Hash) #new hook
+	User = Find("grep -Ril 'str = accessToken.I' %s/com/instagram/" % Hash) #new hook
+	Feed_Inject = Find("grep -Ril '(this, -1942089962)' %s/com/instagram/feed/" % Hash) #new hook
+	Direct_Hold = Find("grep -Ril 'getString(R.string.direct_unsend_message)))' %s/com/instagram/" % Hash) #app missing
+	Feed_Image = Find("grep -Ril 'Collections.sort(this.I)' %s/com/instagram/feed" % Hash) #new hook
+	Comments =  Find("grep -Ril '(View animation2 : this.B.B)' %s/com/instagram/comments/" % Hash) #new hook
+	Comments2 =  Find("grep -Ril 'Uri.parse(str).getQueryParameter("qp_h")' %s/com/instagram/" % Hash) #new hook
+	Dialog = Find("grep -Ril '(E, E.B, E.C, E.F, E.G, E.I, E.D)' %s/com/instagram/" % Hash)	#new hook
+	Profile = Find("grep -Ril 'https://www.instagram' %s/com/instagram/profile/" % Hash) #many classes
+	Like = Find("grep -Ril 'isTouchExplorationEnabled' %s/com/instagram/feed/ui" % Hash) #many classes
 	Suggestion = Find("grep -Ril 'R.layout.mainfeed_generic_megaphone' %s/com/instagram/" % Hash)
 	Date = Find("grep -Ril 'R.string.days_ago_abbreviation' %s/com/instagram/util/" % Hash)
 	Push = Find("grep -Ril 'push_notification_received' %s/com/instagram/notifications/" % Hash)
